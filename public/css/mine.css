@@ -1,0 +1,280 @@
+#cover {
+    background: url("http://www.aveva.com/Images/ajax-loader.gif") no-repeat scroll center center #FFF;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 90000;
+}
+
+
+.nav-item.has-treeview.menu-open.navbarmt-10{
+	margin-top: 54px;
+}
+
+.nav-item .fa{
+	font-size: 25px;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    min-width: 0;
+    border: 0;
+    background-color: rgba(20, 255, 255, 0.6);
+}
+
+.dropdown-menu.show .dropdown-item{
+    background-color: inherit;
+}
+
+.dropdown-menu.show .dropdown-item:hover{
+    color: red;
+}
+
+.dropdown-item.logoutnyala{
+	font-size: 18px;
+}
+
+.dropdown-item.logoutnyala:hover{
+	color: red;
+}
+
+
+/*  Reset  */
+
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+}
+
+input{
+  transition: border 0.1s ease-in-out;
+}
+
+.form-control:focus{
+	border-bottom: 2.5px solid red;
+	-webkit-box-shadow: none;
+          box-shadow: none;
+          transition: border 0.1s ease-in-out;
+
+}
+
+.borb-1{
+	border: 0;
+}
+
+/*  Layout  */
+
+.card-flex{
+	justify-content: space-between;
+	flex-basis: 550px;
+}
+
+.mt-10{
+	margin-top: 100px;
+}
+
+.borb-1{
+	border-bottom: 1px solid black;
+}
+
+/*  Components  */
+
+.fillm:hover{
+	fill: red;
+}
+
+.card-style{
+	background-color: rgba(38,166,154,0.7);
+	border: 0;
+}
+
+.borb-1{
+	background-color: rgba(38,166,154,0);
+}
+
+.borb-1:focus{
+	background-color: rgba(38,166,154,0);
+}
+
+.card-font{
+	font-size: 18px;
+}
+
+.container-style{
+	background-color: white;
+	max-width: 900px;
+	border-radius: 0 0 4px 4px;
+	box-shadow: 0 2px 0 rgba(0,0,0,0.1);
+	position: relative;
+	margin-top: -12px;
+	padding-bottom: 10px;
+	transition: box-shadow 0.2s ease-in;
+	border: 0;
+}
+
+.container-style:hover{
+	box-shadow: 2px 22px 37px -36px rgba(0,0,0,0.75);
+	transition: box-shadow 0.2s ease-out;
+}
+
+#forminline{
+	position: absolute;
+    left: 0;
+    top: 0;
+    width: 350px;
+}
+
+#btnpdf{
+	border: 0;
+	font-size: 25px;
+	background-color: #EFEFEF;
+}
+
+#inputgroup{
+     flex: 0 0 230px;
+}
+
+#form1, #form2, #laporan{
+	height: auto;
+}
+
+#btnpdf:hover{
+	color: red;
+	background-color: white ;
+	border: 1px solid red;
+	padding: 5px 11px 5px 11px;
+	transition: border 0s;
+}
+
+.datadata{
+	width: 50%;
+	height: 30px;
+	position: absolute;
+	top: 10px;
+	left: 295px;
+	z-index: 20;
+}
+
+.btn.btn-success.btn-laporan{
+	max-width: 103px;	
+}
+
+.tt-dataset.tt-dataset-kd_barang{
+	width: 175px;
+	background-color: white;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 0.25rem;
+}
+
+.typeaheadfonting{
+	font-size: 15px;
+}
+
+.kdbarangpostest.tt-suggestion.tt-selectable{
+	padding: 10px;
+}
+
+.kdbarangpostest.tt-suggestion.tt-selectable:hover{
+	background-color: rgba(221, 221, 221, 0.3);
+}
+
+.notfoundata{
+	color: red;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+	border: 0;
+	background: none #585858;
+	background-color: #17A2B8;
+}
+
+.modal-lg{
+	max-width: 1000px;
+}
+
+div.dataTables_wrapper div.dataTables_paginate{
+	margin-right: 110px;
+}
+
+.navbar-toggler{
+    display: none;
+}
+
+@media screen and (max-width: 800px){
+    
+    .navbar-expand-lg .navbar-nav .dropdown-menu{
+        left: -20px;
+        background-color: rgba(255, 255, 255, 0);
+        top: 25px;
+    }
+    
+    .container-style{
+        position: static;
+        width: 100%;
+    }
+    
+    .dropdown-menu.show .dropdown-item{
+        color: red;
+    }
+    
+    .container-style .datadata{
+		display: flex;
+		position: static !important;
+		width: 87%;
+		justify-content: center;
+		height: 35px;
+		margin: 20px auto;
+		z-index: 0;
+	}
+	
+	.container-style #forminline{
+		display: flex;
+		position: static !important;
+		width: 100%;
+		justify-content: center;
+		height: auto;
+		margin: 10px auto;
+		z-index: 0;
+	}
+	
+	#inputgroup{
+        flex: 0 0 195px;
+    }
+	
+	hr{
+	    display:none;
+	}
+	
+	.navbar-nav .dropdown-menu.show {
+        position: absolute;
+        float: none;
+	}
+	
+	.mt-10{
+	    margin-top: 60px;
+    }
+	
+	#btnpdf{
+    	font-size: 25px;
+    	color: red;
+    	background-color: white ;
+    	border: 1px solid red;
+    	padding: 5px 11px 5px 11px;
+    }
+    
+    div.dataTables_wrapper div.dataTables_paginate{
+	    margin: 0 auto;
+    }
+	
+}
