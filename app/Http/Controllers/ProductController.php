@@ -63,7 +63,6 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        $input = $request->all();
         $input = $request->except('kd_barang');
         $product->update($input);
         return response()->json([
