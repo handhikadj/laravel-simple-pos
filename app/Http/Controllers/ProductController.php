@@ -33,7 +33,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $product = Product::create($request->all(), $request->except('typeahead'));
+        $product = Product::create($request->all());
         $product->kd_barang =  $product->id;
         $product->save();
         return response()->json([
@@ -61,11 +61,10 @@ class ProductController extends Controller
      * @param  \App\Postest  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Product $product)
     {
         $input = $request->all();
-        $product = Product::findOrFail($id);
-        $input = Input::except(['kd_barang']);
+        $input = $request->except('kd_barang');
         $product->update($input);
         return response()->json([
             'success' => true,
@@ -79,11 +78,10 @@ class ProductController extends Controller
      * @param  \App\Postest  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
-        $product = Product::findOrFail($id);
+        $product->delete();
         
-        Product::destroy($id);
         return response()->json([
             'success' => true,
             'message' => 'Produk berhasil terhapus'
