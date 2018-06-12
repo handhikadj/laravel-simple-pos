@@ -304,7 +304,7 @@
 			});
 		});		
 
-		$('#modal-form form').on('submit', function (e) {
+		$('#form-contact').on('submit', function (e) {
 			if (!e.isDefaultPrevented()){
 				var id = $('#id').val();
 	            if (save_method == 'add') url = "product"; 
@@ -312,7 +312,7 @@
 	            $.ajax({
 	                url : url,
 	                method : "POST",
-	                data: new FormData($("#modal-form form")[0]),
+	                data: new FormData($(this)[0]),
 	                contentType: false,
 	                processData: false,
 	                success : function(data) {
