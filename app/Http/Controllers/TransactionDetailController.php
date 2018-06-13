@@ -28,18 +28,16 @@ class TransactionDetailController extends Controller
                 $kode = "TR" . date('ym') . '001';                
                 return $kode;
             }
-            else 
-            {
-                $transactionid = substr($transactionselect->id_transaksi, 6);
-                $transactionid = (int)$transactionid;
-                $transactionid++;
+            
+            $transactionid = substr($transactionselect->id_transaksi, 6);
+            $transactionid = (int)$transactionid;
+            $transactionid++;
 
-                // Conjure automatic code
-                $data =  sprintf('%03d', $transactionid);
-                $kode = $kdotomatis . $data;
-                
-                return $kode;
-            } // end of else
+            // Conjure automatic code
+            $data =  sprintf('%03d', $transactionid);
+            $kode = $kdotomatis . $data;
+            
+            return $kode;
 
         } // end of if(empty $kode) 
     }
