@@ -33,4 +33,24 @@ class TransactionDetail extends Model
 		return $this->belongsTo(Transaction::class, 'id_transaksi', 'id_transaksi');
 	}
 
+	public function scopeJoinTransactDetail($query, $kode)
+	{
+		return $query->where('transaksi_detail.id_transaksi', $kode)
+								->join('product', 'transaksi_detail.kd_barang', '=', 'product.kd_barang')
+                                ->select
+                                (
+                                    'transaksi_detail.transaction_detail_id',
+                                    'transaksi_detail.kd_barang',
+                                    'product.nama_roti', 
+                                    'transaksi_detail.jumlah', 
+                                    'transaksi_detail.total_harga', 
+                                    'transaksi_detail.total_harga'
+                                )->get();
+	}
+
+	public function scopeSumTransactDetail($query, $kode)
+	{
+		return $query->where('id_transaksi', $kode)->sum('total_harga');
+	}
+
 }

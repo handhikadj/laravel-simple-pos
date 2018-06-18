@@ -74,18 +74,8 @@ class TransactionDetailController extends Controller
     {
         $kode = $this->index();
 
-        $transaksicombine = DB::table('transaksi_detail as a')
-                                                            ->join('product as b', 'a.kd_barang', '=', 'b.kd_barang')
-                                                            ->select
-                                                            (
-                                                                'a.transaction_detail_id',
-                                                                'a.kd_barang',
-                                                                'b.nama_roti', 
-                                                                'a.jumlah', 
-                                                                'a.total_harga', 
-                                                                'a.total_harga'
-                                                            )->where('a.id_transaksi', $kode)->get();
-        $total                       = DB::table('transaksi_detail')->where('id_transaksi', $kode)->sum('total_harga');
+        $transaksicombine = $transactionDetail->jointransactdetail($kode);
+        $total                       = $transactionDetail->sumtransactdetail($kode);
         // return $transaksicombine;
         return view('tablehitung', compact('transaksicombine', 'total'));
     }
