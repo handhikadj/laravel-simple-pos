@@ -12,7 +12,7 @@
 
     <!-- Scripts -->
     @guest
-    <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="{{ asset('js/app.js') }}" defer></script>
     @endguest
 
     <!-- Fonts -->
@@ -24,12 +24,12 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/mine.css') }}">
     @auth
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link href="{{ asset('sweetalert2/sweetalert2.min.css') }}" rel="stylesheet">
-    <script src="{{ asset('fontawesome/svg-with-js/js/fontawesome-all.min.js') }}"></script>
-    <link href="{{ asset('dataTables/css/dataTables-16.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('dataTables/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/mine.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link href="{{ asset('sweetalert2/sweetalert2.min.css') }}" rel="stylesheet">
+        <script src="{{ asset('fontawesome/svg-with-js/js/fontawesome-all.min.js') }}"></script>
+        <link href="{{ asset('dataTables/css/dataTables-16.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('dataTables/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/mine.css') }}">
      @endauth
 
 </head>
@@ -39,7 +39,7 @@
             @guest 
                 @yield('content')
             @else            
-            @yield('home-content')             
+                @yield('home-content')             
             @endguest  
         
     </div> {{-- app --}}
@@ -47,19 +47,18 @@
 
     @auth
     {{-- Icons --}}
-
+    
     <script src="{{ asset('js/app.js') }}"></script>
-    <script type="text/javascript">
+    <script>
         $.ajaxSetup({
-           headers: { 'X-CSRF-Token' : $('meta[name=csrf-token]').attr('content') }
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
         });
     </script>
      {{-- dataTables --}}
     <script src="{{ asset('dataTables/js/dataTables-16.min.js') }}"></script>
     <script src="{{ asset('sweetalert2/sweetalert2.min.js') }}"></script>
-
-    {{-- Validator --}}
-    {{-- <script src="{{ asset('validator/validator.min.js') }}"></script> --}}
 
     <script src="{{ asset('js/typeahead.js') }}"></script>
 
