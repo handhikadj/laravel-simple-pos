@@ -2,11 +2,17 @@
 
 @section('content')
 <div class="container">
+
     <div class="row justify-content-center">
         <div class="col-md-8 card-flex mt-10">
-            <div class="card card-style">
+            @if( session('successdaftar') )
+                <div id="sessionlogin" class="alert-success p-2 mb-2 rounded text-center animated bounceInDown">
+                    <h5 class="m-0"><b>{{ session('successdaftar') }}</b></h5>
+                </div>
+            @endif
+            
+            <div id="cardstyle" class="card card-style">
                 <div class="card-header"><h1><b>{{ __('Login') }}</b></h1></div>
-
                 <div class="card-body card-font">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf

@@ -11,9 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    @guest
-        <script src="{{ asset('js/app.js') }}" defer></script>
-    @endguest
+    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -22,6 +20,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('css/mine.css') }}">
     @auth
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -42,27 +41,25 @@
                 @yield('home-content')             
             @endguest  
         
-    </div> {{-- app --}}
-    {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
-
+        </div> {{-- app --}}
+    <script src="{{ asset('js/app.js') }}"></script>   
+    <script src="{{ asset('js/for-login.js') }}"></script>
     @auth
-    {{-- Icons --}}
-    
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script>
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
-    </script>
-     {{-- dataTables --}}
-    <script src="{{ asset('dataTables/js/dataTables-16.min.js') }}"></script>
-    <script src="{{ asset('sweetalert2/sweetalert2.min.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
+        <script>
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+        </script>
+         {{-- dataTables --}}
+        <script src="{{ asset('dataTables/js/dataTables-16.min.js') }}"></script>
+        <script src="{{ asset('sweetalert2/sweetalert2.min.js') }}"></script>
 
-    <script src="{{ asset('js/typeahead.js') }}"></script>
+        <script src="{{ asset('js/typeahead.js') }}"></script>
 
-    <script src="{{ asset('js/postest-datatable.js') }}"></script>
+        <script src="{{ asset('js/postest-datatable.js') }}"></script>
     @endauth
 </body>
 
