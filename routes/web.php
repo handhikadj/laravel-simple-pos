@@ -11,14 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return redirect('/admin');
-});
-
-Route::get('/admin', function () {
-    return view('auth.login');
-});
-
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
@@ -28,8 +20,8 @@ Route::group(['middleware' => 'auth'], function () {
     | Home Routes
     |--------------------------------------------------------------------------
     */
-	Route::get('/admin', 'ProductController@home')->name('home');
-	Route::get('/home', 'ProductController@home')->name('home');
+	Route::get('/home', 'ProductController@index');
+    Route::get('/', function () { return redirect('/home'); });
 
 	 /*
     |--------------------------------------------------------------------------

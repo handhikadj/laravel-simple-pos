@@ -17,12 +17,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return redirect('/home');
-    }
-
-    public function home()
-    {
-        return view('home');
+        return view('/home');
     }
 
     /**
