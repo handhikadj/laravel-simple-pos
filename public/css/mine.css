@@ -207,10 +207,6 @@ div.dataTables_wrapper div.dataTables_paginate{
 	margin-right: 110px;
 }
 
-.navbar-toggler{
-    display: none;
-}
-
 @media screen and (max-width: 800px){
     
     .navbar-expand-lg .navbar-nav .dropdown-menu{

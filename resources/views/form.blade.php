@@ -100,8 +100,6 @@
               </div>
             </form> 
           </div> {{-- end of formcontain --}}
-          
-          
 
             <div id="tableinmodal">
               <div class="d-flex">
@@ -114,11 +112,6 @@
               </div>
             
             </div> {{-- end of tableinmodal --}}
-            
-
-
-
-
 
           </div> {{-- end of row --}}
 
