@@ -37,6 +37,24 @@
 	color: red;
 }
 
+#inputgroup{
+	position: relative;
+}
+
+.pdfvalidate{
+	width: 200px;
+	height: auto;
+	padding: 5px 10px 5px 10px;
+	position: absolute;
+	top: 2px;
+	left: 150px;
+	background-color: #be4b49;
+	color: #fff;
+	border: 0;
+	border-radius: 2px;
+	box-shadow: 0 0 0 1px rgba(139, 3, 0, .75), 0 1px 10px rgba(0, 0, 0, .35);
+}
+
 
 /*  Reset  */
 

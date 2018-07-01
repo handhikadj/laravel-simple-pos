@@ -30,6 +30,10 @@ class TransactionController extends Controller
 
     public function exportpdfs(Request $request, TransactionDetail $transactionpdf)
     {
+        $rules      = [ 'laporanpdf' => 'required' ];
+        $message = [ 'laporanpdf.required' => 'Tidak Boleh Kosong' ];
+        $this->validate($request, $rules, $message);
+
         $transactionpdfs = $transactionpdf->whereDate('created_at', $request->laporanpdf)->get();
         
         $totalpdf = $transactionpdfs->sum('total_harga');

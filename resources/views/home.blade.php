@@ -20,6 +20,11 @@
                     <button type="submit" id="btnpdf" title="Cetak Berkas" class="btn">
                         <i class="far fa-file-pdf" id="pdfpend"></i>
                     </button>
+                    @if($errors->has('laporanpdf'))
+                        <div class="pdfvalidate">
+                            <span> {{ $errors->first('laporanpdf') }}  </span>
+                        </div>
+                    @endif
                 </div>
             </form>
         </div>
