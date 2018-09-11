@@ -1,4 +1,7 @@
-# laravel-simple-pos
+
+# Program Point of Sale Sederhana
+
+Aplikasi Web ini adalah aplikasi point of sale sederhana menggunakan Laravel dan jQuery DataTable. 
 
 
 ### Installation
@@ -9,7 +12,3 @@
 3. ```php artisan key:generate```
 4. Login with admin@admin.com | 123123 or new up one
 5. And you're all set!
-
-
-
-
